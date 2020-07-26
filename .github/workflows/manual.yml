@@ -25,5 +25,7 @@ jobs:
         build-dir: ${{ runner.workspace }}/build
         cc: clang
         cxx: clang++
+    - name: run ls
+      run: pwd
         
      

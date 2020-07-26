@@ -19,9 +19,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Setup cmake
-      uses: jwlawson/actions-setup-cmake@v1.3
-      with:
-        cmake-version: '3.16.x'
-    - name: Use cmake
-      run: echo "::add-path::CMakeLists.txt"
+    - name: build and test
+      uses: ashutoshvarma/action-cmake-build@master
+      with: 
+        build_dir: ${{ runner.workspace }}/build
+        cc: clang
+        cxx: clang++
+        
+     

@@ -24,4 +24,4 @@ jobs:
       with:
         cmake-version: '3.16.x'
     - name: Use cmake
-      run: ls
+      run: cmake ${{ github.workspace }}/CMakeLists.txt

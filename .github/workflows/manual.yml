@@ -25,5 +25,8 @@ jobs:
           cmake-version: '3.16.x'
       - name: Use cmake
         run: cmake --version
+      - uses: action/checkout@master
+      - name: show dir
+        run: ls -R
         
      
